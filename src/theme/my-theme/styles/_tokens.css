@@ -1,0 +1,52 @@
+:root {
+	/* Colors */
+	--color-bg: #ffffff;
+	--color-bg-highlight: #DFF9F2;
+	--color-primary: #007C68;
+	--color-primary-hover: #025B4C;
+	--color-primary-active: #0B4B3F;
+	--color-text: #242727;
+	--color-text-light: #565F5F;
+	--color-text-highlight: #006A59;
+	--color-border: #242727;
+
+	/* Font */
+	--font-primary: "Roboto";
+
+	/* Font sizes */
+	--font-sm: 0.875rem; /* 14px */
+	--font-md: 1rem;     /* 16px */
+	--font-lg: 1.25rem;  /* 20px */
+	--font-xl: 1.5rem;   /* 24px */
+
+	--font-dsk-h1: 3.5rem;
+	--font-dsk-h2: 3rem;
+	--font-dsk-h3: 2.5rem;
+	--font-dsk-h4: 2.125rem;
+	--font-dsk-h5: 1.75rem;
+	--font-dsk-h6: 1.5rem;
+
+	/* Line-height ranges */
+	--lh-tight: 1.15;
+	--lh-medium: 1.2;
+	--lh-loose: 1.29;
+	--lh-body: 1.5;
+
+  /* Spacing scale (4px base) */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+
+  /* Radius */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+
+  /* Transitions */
+	--transition-fast: 150ms ease;
+	--transition-normal: 250ms ease;
+	--transition-slow: 300ms ease;
+
+}

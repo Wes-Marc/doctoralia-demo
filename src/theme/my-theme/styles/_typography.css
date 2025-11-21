@@ -1,0 +1,64 @@
+body {
+	background-color: var(--color-bg);
+	line-height: var(--lh-body);
+}
+
+/* Paragraphs */
+p {
+	margin: 0 0 0 1.5rem;
+}
+
+/* Anchors */
+a {
+	cursor: pointer;
+	transition: var(--transition-slow);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0 1.5rem;
+}
+
+h1,
+h2 {
+	line-height: var(--lh-tight);
+}
+
+h3,
+h4 {
+	line-height: var(--lh-medium);
+}
+
+h5,
+h6 {
+	line-height: var(--lh-loose);
+}
+
+h1 {
+	font-size: var(--font-dsk-h1);
+}
+
+h2 {
+	font-size: var(--font-dsk-h2);
+}
+
+h3 {
+	font-size: var(--font-dsk-h3);
+}
+
+h4 {
+	font-size: var(--font-dsk-h4);
+}
+
+h5 {
+	font-size: var(--font-dsk-h5);
+}
+
+h6 {
+	font-size: var(--font-dsk-h6);
+}
