@@ -1,0 +1,7 @@
+.feature_table__title_wrapper {
+	margin-block-end: var(--space-15);
+}
+
+.feature_table__title {
+	margin: 0;
+}

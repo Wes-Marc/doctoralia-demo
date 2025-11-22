@@ -1,9 +1,19 @@
-.flex-center {
+.content_wrapper {
+	margin-inline: 1rem;
+	max-width: var(--main-content-wrapper);
+}
+@media screen and (min-width: 1024px) {
+	.content_wrapper {
+		margin-inline: auto;
+	}
+}
+
+.flex_center {
 	align-items: center;
 	display: flex;
 	justify-content: center;
 }
 
-.text-center {
+.text_center {
 	text-align: center;
 }

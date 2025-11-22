@@ -10,6 +10,9 @@
 	--color-text-highlight: #006A59;
 	--color-border: #242727;
 
+	/* Container */
+	--main-content-wrapper: 80rem; // 1280px
+
 	/* Font */
 	--font-primary: "Roboto";
 
@@ -38,6 +41,16 @@
 	--space-3: 12px;
 	--space-4: 16px;
 	--space-5: 24px;
+	--space-6: 28px;
+	--space-7: 32px;
+	--space-8: 36px;
+	--space-9: 40px;
+	--space-10: 44px;
+	--space-11: 48px;
+	--space-12: 52px;
+	--space-13: 56px;
+	--space-14: 60px;
+	--space-15: 64px;
 
   /* Radius */
 	--radius-sm: 4px;
