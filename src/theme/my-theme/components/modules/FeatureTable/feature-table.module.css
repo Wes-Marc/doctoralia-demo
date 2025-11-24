@@ -5,3 +5,11 @@
 .feature_table__title {
 	margin: 0;
 }
+
+.plan {
+	padding: 0.25rem 1rem 0.5rem 1rem;
+}
+
+.plan__cta {
+	margin-block-start: 0.5rem;
+}

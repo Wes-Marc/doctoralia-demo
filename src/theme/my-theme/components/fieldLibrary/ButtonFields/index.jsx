@@ -8,9 +8,17 @@ import {
 
 export default function ButtonFields(props) {
 	const {
-		textVisibility = null,
-		linkVisibility = null,
-		iconVisibility = null,
+		textDefault = 'Learn more',
+		styleVariantDefault = "primary",
+		sizeDefault = "small",
+		linkDefault = {
+			open_in_new_tab: true,
+		},
+		iconDefault = {
+			name: 'arrow-down',
+		},
+		iconPositionDefault = 'right',
+		fieldsVisibility = null
 	} = props;
 
 	return (
@@ -19,14 +27,42 @@ export default function ButtonFields(props) {
 				label="Button text"
 				name="buttonText"
 				visibilityRules="ADVANCED"
-				advancedVisibility={textVisibility}
-				default="Learn more"
+				advancedVisibility={fieldsVisibility}
+				default={textDefault}
+			/>
+			<ChoiceField
+				label="Button style"
+				name="buttonVariant"
+				display="select"
+				displayWidth="half_width"
+				visibilityRules="ADVANCED"
+				advancedVisibility={fieldsVisibility}
+				choices={[
+					['primary', 'Primary'],
+					['secondary', 'Secondary']
+				]}
+				required={true}
+				default={styleVariantDefault}
+			/>
+			<ChoiceField
+				label="Button size"
+				name="buttonSize"
+				display="select"
+				displayWidth="half_width"
+				visibilityRules="ADVANCED"
+				advancedVisibility={fieldsVisibility}
+				choices={[
+					['small', 'Small'],
+					['large', 'Large']
+				]}
+				required={true}
+				default={sizeDefault}
 			/>
 			<LinkField
 				label="Link"
 				name="buttonLink"
 				visibilityRules="ADVANCED"
-				advancedVisibility={linkVisibility}
+				advancedVisibility={fieldsVisibility}
 				supportedTypes={[
 					'EXTERNAL',
 					"CONTENT",
@@ -34,23 +70,15 @@ export default function ButtonFields(props) {
 					"EMAIL_ADDRESS",
 					"BLOG"
 				]}
-				default={{
-					url: {
-						content_id: null,
-						type: "EXTERNAL",
-						href: ""
-					},
-					open_in_new_tab: true,
-					no_follow: false
-				}}
+				default={linkDefault}
 			/>
 			<BooleanField 
 				label="Show icon"
 				name="buttonShowIcon"
 				id="buttonShowIcon"
-				visibilityRules="ADVANCED"
-				advancedVisibility={iconVisibility}
 				display="toggle"
+				visibilityRules="ADVANCED"
+				advancedVisibility={fieldsVisibility}
 				default={false}
 			/>
 			<IconField
@@ -63,9 +91,7 @@ export default function ButtonFields(props) {
 					operator: 'EQUAL'
 				}}
 				iconSet="fontawesome-6.4.2"
-				default={{
-					name: 'arrow-down',
-				}}
+				default={iconDefault}
 			/>
 			<ChoiceField
 				label="Icon position"
@@ -80,7 +106,7 @@ export default function ButtonFields(props) {
 					['right', 'Right']
 				]}
 				display="select"
-				default={"right"}
+				default={iconPositionDefault}
 			/>
 		</>
 	);

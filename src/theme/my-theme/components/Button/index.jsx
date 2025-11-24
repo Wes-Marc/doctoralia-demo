@@ -1,27 +1,64 @@
 import { Icon } from '@hubspot/cms-components';
-import styles from './button.module.css';
-import { getLinkHref, getLinkRel } from '../utils/link-fields.js';
+import { getLinkHref, getLinkRel, getLinkTarget } from '../utils/link-fields.js';
 
-export function Button(fields) {
+function getButtonStyleVariant(buttonVariant) {
+	const options = {
+		primary: 'button--primary',
+		secondary: 'button--secondary'
+	}
+
+	return options[buttonVariant];
+}
+
+function getButtonStyleSize(buttonSize) {
+	const sizes = {
+		small: 'button--small',
+		large: 'button--large'
+	}
+
+	return sizes[buttonSize];
+}
+
+function getButtonIconPosition(position) {
+	const iconPositions = {
+		right: 'button--icon_right',
+		left: 'button--icon_left'
+	};
+
+	return iconPositions[position];
+}
+
+export function Button(moduleFields) {
 	const {
-		text,
-		link,
-		buttonStyle,
+		buttonText,
+		buttonVariant,
 		buttonSize,
-		showIcon,
-		iconFieldPath,
-		iconPosition
-	} = fields;
+		buttonLink,
+		buttonShowIcon,
+		buttonIcon,
+		buttonIconPosition
+	} = moduleFields;
+
+	const buttonStyleVariant = getButtonStyleVariant(buttonVariant);
+	const buttonStyleSize = getButtonStyleSize(buttonSize);
+	const iconPosition = getButtonIconPosition(buttonIconPosition);
 
 	return (
 		<a
-			className={`${styles.button}`}
-			href={getLinkHref(link)}
-			rel={getLinkRel(link)}
-			target={link.open_in_new_tab ? "_blank" : ""}
+			className={`button ${buttonStyleVariant} ${buttonStyleSize} ${iconPosition}`}
+			href={getLinkHref(buttonLink)}
+			rel={getLinkRel(buttonLink)}
+			target={getLinkTarget(buttonLink)}
 		>
-			{text}
-			{iconFieldPath && showIcon && <Icon className={styles.button__icon} fieldPath={iconFieldPath} purpose='DECORATIVE' />}
+			{buttonText}
+			{
+				buttonIcon && buttonShowIcon && 
+				<Icon
+					fieldPath={buttonIcon}
+					purpose='DECORATIVE'
+					height={16}
+				/>
+			}
 		</a>
 	);
 }

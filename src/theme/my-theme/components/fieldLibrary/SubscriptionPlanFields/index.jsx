@@ -1,22 +1,24 @@
-import { BooleanField, NumberField, RichTextField, TextField } from "@hubspot/cms-components/fields";
-import ButtonFields from "../ButtonFields";
+import {
+	BooleanField,
+	NumberField,
+	RichTextField,
+	TextField
+} from "@hubspot/cms-components/fields";
 
-export default function PlanPriceFields() {
-	const buttonFieldVisibility = {
-		boolean_operator: 'OR',
-		criteria: [{
-			controlling_field_path: 'showButton',
-			controlling_value_regex: 'true',
-			operator: 'EQUAL'
-		}]
-	}
+export default function SubscriptionFields(props) {
+	const {
+		nameDefault = "Starter",
+		priceDefault = 1,
+		previousPriceDefault = 2,
+		descriptionDefault = '<p><span style="color:#006A59;font-weight:600">Save 20% off</span>for the first 2 months</p>',
+	} = props;
 
 	return (
 		<>
 			<TextField
 				label="Plan name"
 				name="planName"
-				default="Starter"
+				default={nameDefault}
 			/>
 			<BooleanField
 				label="Show previous price"
@@ -35,7 +37,7 @@ export default function PlanPriceFields() {
 				step={1}
 				prefix="€"
 				placeholder="34"
-				default={34}
+				default={priceDefault}
 			/>
 			<NumberField
 				label="Previous price"
@@ -51,14 +53,14 @@ export default function PlanPriceFields() {
 				step={1}
 				prefix="€"
 				placeholder="69"
-				default={69}
+				default={previousPriceDefault}
 			/>
 			<BooleanField
 				label="Add description"
 				name="showDescription"
 				id="showDescription"
 				display="toggle"
-				default={false}
+				default={true}
 			/>
 			<RichTextField
 				label="Description"
@@ -68,7 +70,7 @@ export default function PlanPriceFields() {
 					controlling_value_regex: "true",
 					operator: "EQUAL"
 				}}
-				default='<p><span style="color:#006A59">Save 20% off</span> for the first 2 months</p>'
+				default={descriptionDefault}
 			/>
 			<BooleanField
 				label="Show Button"
@@ -76,11 +78,6 @@ export default function PlanPriceFields() {
 				id="showButton"
 				display="toggle"
 				default={true}
-			/>
-			<ButtonFields
-				textVisibility={buttonFieldVisibility}
-				linkVisibility={buttonFieldVisibility}
-				iconVisibility={buttonFieldVisibility}
 			/>
 		</>
 	);

@@ -23,3 +23,9 @@ export function getLinkRel(linkField) {
 
 	return relValues.join(' ');
 }
+
+export function getLinkTarget(linkField) {
+	if (!linkField) return '';
+
+	return linkField.open_in_new_tab ? '_blank' : '';
+}

@@ -1,0 +1,19 @@
+/* Table */
+
+table {
+	border-collapse: collapse;
+	overflow-wrap: break-word;
+}
+
+/* Table cells */
+
+td,
+th {
+	vertical-align: top;
+}
+
+/* Table header */
+
+thead th {
+	vertical-align: bottom;
+}

@@ -1,3 +1,5 @@
+{% set base_font = theme.base_font.font %}
+
 :root {
 	/* Colors */
 	--color-bg: #ffffff;
@@ -7,14 +9,16 @@
 	--color-primary-active: #0B4B3F;
 	--color-text: #242727;
 	--color-text-light: #565F5F;
+	--color-text-muted: #667070;
 	--color-text-highlight: #006A59;
+	--color-text-inverted: #ffffff;
 	--color-border: #242727;
 
 	/* Container */
-	--main-content-wrapper: 80rem; // 1280px
+	--main-content-wrapper: 80rem;
 
 	/* Font */
-	--font-primary: "Roboto";
+	--font-primary: {{ base_font }};
 
 	/* Font sizes */
 	--font-sm: 0.875rem; /* 14px */
@@ -52,10 +56,17 @@
 	--space-14: 60px;
 	--space-15: 64px;
 
+	/* Gap */
+	--gap-tn: 0.25rem;
+	--gap-sm: 0.5rem;
+	--gap-md: 1rem;
+	--gap-lg: 2rem;
+
   /* Radius */
 	--radius-sm: 4px;
 	--radius-md: 8px;
 	--radius-lg: 12px;
+	--radius-round: 999px;
 
   /* Transitions */
 	--transition-fast: 150ms ease;

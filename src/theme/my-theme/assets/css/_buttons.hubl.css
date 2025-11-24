@@ -1,0 +1,71 @@
+.button {
+	align-items: center;
+	border-radius: var(--radius-round);
+	color: var(--color-text);
+	display: inline-flex;
+	font-weight: 500;
+	gap: var(--gap-sm);
+	justify-content: center;
+	text-decoration: none;
+	width: 100%;
+}
+
+/* VARIANTS */
+
+.button--primary {
+	background-color: var(--color-primary);
+	color: var(--color-text-inverted);
+}
+
+.button--secondary {
+	outline: 1px solid var(--color-border);
+}
+
+/* Hover & Focus */
+
+.button--primary:hover,
+.button--primary:focus {
+	background-color: var(--color-primary-hover);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+	background-color: var(--color-primary-hover);
+	color: var(--color-text-inverted);
+}
+
+/* Click */
+
+.button--primary:active {
+	background-color: var(--color-primary-active);
+}
+
+.button--secondary:active {
+	background-color: var(--color-primary-active);
+	color: var(--color-text-inverted);
+}
+
+/* SIZES */
+
+.button--small {
+	padding: 0.5rem 1.5rem;
+}
+
+.button--large {
+	padding: 1rem 2rem;
+}
+
+/* ICON */
+
+.button--icon_right {
+	flex-direction: row;
+}
+
+.button--icon_left {
+	flex-direction: row-reverse;
+}
+
+/* Invert Icon Color For Primary Button */
+.button--primary svg {
+	fill: var(--color-text-inverted);
+}

@@ -1,0 +1,531 @@
+ {% set base_font = theme.base_font.font %} 
+
+:root {
+	/* Colors */
+	--color-bg: #ffffff;
+	--color-bg-highlight: #DFF9F2;
+	--color-primary: #007C68;
+	--color-primary-hover: #025B4C;
+	--color-primary-active: #0B4B3F;
+	--color-text: #242727;
+	--color-text-light: #565F5F;
+	--color-text-muted: #667070;
+	--color-text-highlight: #006A59;
+	--color-text-inverted: #ffffff;
+	--color-border: #242727;
+
+	/* Container */
+	--main-content-wrapper: 80rem;
+
+	/* Font */
+	--font-primary:  {{ base_font }} ;
+
+	/* Font sizes */
+	--font-sm: 0.875rem; /* 14px */
+	--font-md: 1rem;     /* 16px */
+	--font-lg: 1.25rem;  /* 20px */
+	--font-xl: 1.5rem;   /* 24px */
+
+	--font-dsk-h1: 3.5rem;
+	--font-dsk-h2: 3rem;
+	--font-dsk-h3: 2.5rem;
+	--font-dsk-h4: 2.125rem;
+	--font-dsk-h5: 1.75rem;
+	--font-dsk-h6: 1.5rem;
+
+	/* Line-height ranges */
+	--lh-tight: 1.15;
+	--lh-medium: 1.2;
+	--lh-loose: 1.29;
+	--lh-body: 1.5;
+
+  /* Spacing scale (4px base) */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 28px;
+	--space-7: 32px;
+	--space-8: 36px;
+	--space-9: 40px;
+	--space-10: 44px;
+	--space-11: 48px;
+	--space-12: 52px;
+	--space-13: 56px;
+	--space-14: 60px;
+	--space-15: 64px;
+
+	/* Gap */
+	--gap-tn: 0.25rem;
+	--gap-sm: 0.5rem;
+	--gap-md: 1rem;
+	--gap-lg: 2rem;
+
+  /* Radius */
+	--radius-sm: 4px;
+	--radius-md: 8px;
+	--radius-lg: 12px;
+	--radius-round: 999px;
+
+  /* Transitions */
+	--transition-fast: 150ms ease;
+	--transition-normal: 250ms ease;
+	--transition-slow: 300ms ease;
+
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct box sizing in Firefox.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Remove the inheritance of text transform in Edge and Firefox.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
+ */
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+body {
+	background-color: var(--color-bg);
+	font-family: var(--font-primary, sans-serif);
+	line-height: var(--lh-body);
+}
+
+/* Paragraphs */
+
+p {
+	margin: 0 0 1.5rem;
+}
+
+/* Anchors */
+
+a {
+	cursor: pointer;
+	transition: var(--transition-slow);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 1.5rem;
+}
+
+h1,
+h2 {
+	line-height: var(--lh-tight);
+}
+
+h3,
+h4 {
+	line-height: var(--lh-medium);
+}
+
+h5,
+h6 {
+	line-height: var(--lh-loose);
+}
+
+h1 {
+	font-size: var(--font-dsk-h1);
+}
+
+h2 {
+	font-size: var(--font-dsk-h2);
+}
+
+h3 {
+	font-size: var(--font-dsk-h3);
+}
+
+h4 {
+	font-size: var(--font-dsk-h4);
+}
+
+h5 {
+	font-size: var(--font-dsk-h5);
+}
+
+h6 {
+	font-size: var(--font-dsk-h6);
+}
+
+.button {
+	align-items: center;
+	border-radius: var(--radius-round);
+	color: var(--color-text);
+	display: inline-flex;
+	font-weight: 500;
+	gap: var(--gap-sm);
+	justify-content: center;
+	text-decoration: none;
+	width: 100%;
+}
+
+/* VARIANTS */
+
+.button--primary {
+	background-color: var(--color-primary);
+	color: var(--color-text-inverted);
+}
+
+.button--secondary {
+	outline: 1px solid var(--color-border);
+}
+
+/* Hover & Focus */
+
+.button--primary:hover,
+.button--primary:focus {
+	background-color: var(--color-primary-hover);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+	background-color: var(--color-primary-hover);
+	color: var(--color-text-inverted);
+}
+
+/* Click */
+
+.button--primary:active {
+	background-color: var(--color-primary-active);
+}
+
+.button--secondary:active {
+	background-color: var(--color-primary-active);
+	color: var(--color-text-inverted);
+}
+
+/* SIZES */
+
+.button--small {
+	padding: 0.5rem 1.5rem;
+}
+
+.button--large {
+	padding: 1rem 2rem;
+}
+
+/* ICON */
+
+.button--icon_right {
+	flex-direction: row;
+}
+
+.button--icon_left {
+	flex-direction: row-reverse;
+}
+
+/* Invert Icon Color For Primary Button */
+
+.button--primary svg {
+	fill: var(--color-text-inverted);
+}
+
+.content_wrapper {
+	margin-inline: 1rem;
+	max-width: var(--main-content-wrapper);
+}
+
+@media screen and (min-width: 1024px) {
+	.content_wrapper {
+		margin-inline: auto;
+	}
+}
+
+.flex_center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.text_center {
+	text-align: center;
+}
+
+/* Table */
+
+table {
+	border-collapse: collapse;
+	overflow-wrap: break-word;
+}
+
+/* Table cells */
+
+td,
+th {
+	vertical-align: top;
+}
+
+/* Table header */
+
+thead th {
+	vertical-align: bottom;
+}
