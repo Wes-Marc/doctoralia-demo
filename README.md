@@ -45,7 +45,7 @@ Building and using this project is straightforward, the configuration files are 
 * @spingroup/postcss-hubl (latest)
 
 
-\*\*Important note:\*\* I've used HubSpot's \*\*2025.2\*\* platform.
+**Important note:** I've used HubSpot's **2025.2** platform.
 
 
 Thank you for viewing this, and I look forward to collaborate in awesome HubSpot projects with you!
