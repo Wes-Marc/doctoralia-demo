@@ -13,6 +13,8 @@
 	--color-text-highlight: #006A59;
 	--color-text-inverted: #ffffff;
 	--color-border: #242727;
+	--color-border-transparent: rgba(36, 39, 39, 0.16);
+	--color-white: #ffffff;
 
 	/* Container */
 	--main-content-wrapper: 80rem;
@@ -63,9 +65,9 @@
 	--gap-lg: 2rem;
 
   /* Radius */
-	--radius-sm: 4px;
-	--radius-md: 8px;
-	--radius-lg: 12px;
+	--radius-sm: 0.5rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
 	--radius-round: 999px;
 
   /* Transitions */

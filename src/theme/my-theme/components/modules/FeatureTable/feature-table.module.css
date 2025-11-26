@@ -1,13 +1,46 @@
-.feature_table__title_wrapper {
+.feature_table__section_title_wrapper {
 	margin-block-end: var(--space-15);
 }
 
-.feature_table__title {
+.feature_table__section_title {
 	margin: 0;
 }
 
+.feature_table__title,
+.feature_table__description {
+	margin: 0;
+	max-width: 21.185rem;
+}
+
+.feature_table__title {
+	color: var(--color-text);
+}
+
+.feature_table__description {
+	color: var(--color-text-light);
+	font-weight: 400;
+}
+
 .plan {
+	margin-inline: auto;
+	max-width: 19.6238rem;
 	padding: 0.25rem 1rem 0.5rem 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+.plan_highlight__support {
+	position: relative;
+}
+
+.plan_highlight__support::before {
+	content: '';
+	background-color: #ffffff;
+	position: absolute;
+	top: -1rem;
+	left: 0;
+	right: 0;
+	bottom: 1rem;
 }
 
 .plan__cta {

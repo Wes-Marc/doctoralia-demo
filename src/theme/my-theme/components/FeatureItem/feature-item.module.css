@@ -1,0 +1,19 @@
+.feature_table__category {
+	border-color: var(--color-border);
+	color: var(--color-text);
+	font-size: var(--font-lg);
+	font-weight: 600;
+	padding-block: 3rem 1rem;
+	max-width: 21.185rem;
+}
+
+.feature {
+	display: inline-flex;
+	gap: var(--gap-tn);
+	padding: 0.25rem 0 0.25rem 1rem;
+}
+
+.feature__item {
+	color: var(--color-text);
+	margin: 0;
+}

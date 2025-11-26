@@ -7,10 +7,13 @@ import {
 
 export default function SubscriptionFields(props) {
 	const {
-		nameDefault = "Starter",
-		priceDefault = 1,
-		previousPriceDefault = 2,
-		descriptionDefault = '<p><span style="color:#006A59;font-weight:600">Save 20% off</span>for the first 2 months</p>',
+		planName = "Starter",
+		showPrevious = true,
+		planPrice = 1,
+		previousPrice = 2,
+		showDescription = true,
+		description = '<p><span style="color:#006A59;font-weight:600">Save 20% off</span>for the first 2 months</p>',
+		showButton = true
 	} = props;
 
 	return (
@@ -18,14 +21,14 @@ export default function SubscriptionFields(props) {
 			<TextField
 				label="Plan name"
 				name="planName"
-				default={nameDefault}
+				default={planName}
 			/>
 			<BooleanField
 				label="Show previous price"
 				name="showPrevious"
 				id="showPrevious"
 				display="toggle"
-				default={true}
+				default={showPrevious}
 			/>
 			<NumberField
 				label="Price"
@@ -37,7 +40,7 @@ export default function SubscriptionFields(props) {
 				step={1}
 				prefix="€"
 				placeholder="34"
-				default={priceDefault}
+				default={planPrice}
 			/>
 			<NumberField
 				label="Previous price"
@@ -53,14 +56,14 @@ export default function SubscriptionFields(props) {
 				step={1}
 				prefix="€"
 				placeholder="69"
-				default={previousPriceDefault}
+				default={previousPrice}
 			/>
 			<BooleanField
 				label="Add description"
 				name="showDescription"
 				id="showDescription"
 				display="toggle"
-				default={true}
+				default={showDescription}
 			/>
 			<RichTextField
 				label="Description"
@@ -70,14 +73,14 @@ export default function SubscriptionFields(props) {
 					controlling_value_regex: "true",
 					operator: "EQUAL"
 				}}
-				default={descriptionDefault}
+				default={description}
 			/>
 			<BooleanField
 				label="Show Button"
 				name="showButton"
 				id="showButton"
 				display="toggle"
-				default={true}
+				default={showButton}
 			/>
 		</>
 	);

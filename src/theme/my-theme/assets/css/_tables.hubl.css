@@ -3,17 +3,40 @@
 table {
 	border-collapse: collapse;
 	overflow-wrap: break-word;
+	width: 100%;
 }
 
 /* Table cells */
 
 td,
 th {
-	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
 }
 
-/* Table header */
+td svg,
+th svg {
+	display: block;
+}
+
+/* Table header & body */
 
 thead th {
+	text-align: left;
 	vertical-align: bottom;
+}
+
+tbody th,
+tbody td {
+	border-block-end: 1px solid var(--color-border-transparent);
+}
+
+tbody th {
+	text-align: left;
+}
+
+tbody td {
+	color: var(--color-text-light);
+	text-align: center;
 }

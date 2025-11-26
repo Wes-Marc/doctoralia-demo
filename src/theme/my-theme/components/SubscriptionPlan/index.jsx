@@ -1,7 +1,7 @@
 import { RichText } from '@hubspot/cms-components';
 import styles from './subscriptions.module.css';
 
-export function SubscriptionPlan(moduleFields) {
+export function SubscriptionPlan(props) {
 	const {
 		planName,
 		showPrevious,
@@ -10,7 +10,7 @@ export function SubscriptionPlan(moduleFields) {
 		showDescription,
 		description,
 		showButton,
-	} = moduleFields;
+	} = props;
 
 	return (
 		<div className={styles.subscription}>

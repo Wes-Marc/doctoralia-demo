@@ -13,6 +13,8 @@
 	--color-text-highlight: #006A59;
 	--color-text-inverted: #ffffff;
 	--color-border: #242727;
+	--color-border-transparent: rgba(36, 39, 39, 0.16);
+	--color-white: #ffffff;
 
 	/* Container */
 	--main-content-wrapper: 80rem;
@@ -63,9 +65,9 @@
 	--gap-lg: 2rem;
 
   /* Radius */
-	--radius-sm: 4px;
-	--radius-md: 8px;
-	--radius-lg: 12px;
+	--radius-sm: 0.5rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
 	--radius-round: 999px;
 
   /* Transitions */
@@ -436,6 +438,7 @@ h6 {
 }
 
 .button--secondary {
+	background-color: var(--color-white);
 	outline: 1px solid var(--color-border);
 }
 
@@ -510,22 +513,57 @@ h6 {
 	text-align: center;
 }
 
+.bg_highlight {
+	background-color: var(--color-bg-highlight);
+}
+
+.round_top {
+	border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.round_bottom {
+	border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
 /* Table */
 
 table {
 	border-collapse: collapse;
 	overflow-wrap: break-word;
+	width: 100%;
 }
 
 /* Table cells */
 
 td,
 th {
-	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
 }
 
-/* Table header */
+td svg,
+th svg {
+	display: block;
+}
+
+/* Table header & body */
 
 thead th {
+	text-align: left;
 	vertical-align: bottom;
+}
+
+tbody th,
+tbody td {
+	border-block-end: 1px solid var(--color-border-transparent);
+}
+
+tbody th {
+	text-align: left;
+}
+
+tbody td {
+	color: var(--color-text-light);
+	text-align: center;
 }

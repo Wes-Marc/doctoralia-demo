@@ -17,3 +17,15 @@
 .text_center {
 	text-align: center;
 }
+
+.bg_highlight {
+	background-color: var(--color-bg-highlight);
+}
+
+.round_top {
+	border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.round_bottom {
+	border-radius: 0 0 var(--radius-md) var(--radius-md);
+}

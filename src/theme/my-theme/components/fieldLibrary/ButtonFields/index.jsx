@@ -8,16 +8,17 @@ import {
 
 export default function ButtonFields(props) {
 	const {
-		textDefault = 'Learn more',
-		styleVariantDefault = "primary",
-		sizeDefault = "small",
-		linkDefault = {
+		buttonText = "Learn more",
+		buttonVariant = "primary",
+		buttonSize = "small",
+		buttonLink = {
 			open_in_new_tab: true,
 		},
-		iconDefault = {
+		buttonShowIcon = false,
+		buttonIcon = {
 			name: 'arrow-down',
 		},
-		iconPositionDefault = 'right',
+		buttonIconPosition = 'right',
 		fieldsVisibility = null
 	} = props;
 
@@ -28,7 +29,7 @@ export default function ButtonFields(props) {
 				name="buttonText"
 				visibilityRules="ADVANCED"
 				advancedVisibility={fieldsVisibility}
-				default={textDefault}
+				default={buttonText}
 			/>
 			<ChoiceField
 				label="Button style"
@@ -42,7 +43,7 @@ export default function ButtonFields(props) {
 					['secondary', 'Secondary']
 				]}
 				required={true}
-				default={styleVariantDefault}
+				default={buttonVariant}
 			/>
 			<ChoiceField
 				label="Button size"
@@ -56,7 +57,7 @@ export default function ButtonFields(props) {
 					['large', 'Large']
 				]}
 				required={true}
-				default={sizeDefault}
+				default={buttonSize}
 			/>
 			<LinkField
 				label="Link"
@@ -70,7 +71,7 @@ export default function ButtonFields(props) {
 					"EMAIL_ADDRESS",
 					"BLOG"
 				]}
-				default={linkDefault}
+				default={buttonLink}
 			/>
 			<BooleanField 
 				label="Show icon"
@@ -79,7 +80,7 @@ export default function ButtonFields(props) {
 				display="toggle"
 				visibilityRules="ADVANCED"
 				advancedVisibility={fieldsVisibility}
-				default={false}
+				default={buttonShowIcon}
 			/>
 			<IconField
 				label="Icon"
@@ -91,7 +92,7 @@ export default function ButtonFields(props) {
 					operator: 'EQUAL'
 				}}
 				iconSet="fontawesome-6.4.2"
-				default={iconDefault}
+				default={buttonIcon}
 			/>
 			<ChoiceField
 				label="Icon position"
@@ -105,8 +106,9 @@ export default function ButtonFields(props) {
 					['left', 'Left'],
 					['right', 'Right']
 				]}
+				required={true}
 				display="select"
-				default={iconPositionDefault}
+				default={buttonIconPosition}
 			/>
 		</>
 	);

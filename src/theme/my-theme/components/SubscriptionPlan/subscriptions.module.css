@@ -30,5 +30,6 @@
 .subscription__description p {
 	color: var(--color-text-light);
 	font-size: var(--font-sm);
+	font-weight: 400;
 	margin: 0;
 }
