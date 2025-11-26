@@ -1,11 +1,32 @@
 [
   {
-    "type": "Color",
-    "name": "brand_color",
-    "label": "Brand Color",
+    "name": "base_font",
+    "label": "Base font",
+    "required": false,
+    "locked": false,
+    "inline_help_text": "",
+    "help_text": "",
+    "load_external_fonts": true,
+    "type": "font",
     "default": {
-      "color": "#2d3e50",
-      "opacity": 100
+      "size": 12,
+      "font": "Roboto",
+      "fallback": "sans-serif",
+      "font_set": "GOOGLE",
+      "google_font_variants": ["300", "400", "500", "600", "700"],
+      "size_unit": "px",
+      "color": "#000",
+      "styles": {}
+    },
+    "visibility": {
+      "hidden_subfields": {
+        "size": true,
+        "bold": true,
+        "italic": true,
+        "underline": true,
+        "color": true,
+        "styles": true
+      }
     }
   }
 ]

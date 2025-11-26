@@ -1,0 +1,35 @@
+.subscription {
+	display: flex;
+	flex-direction: column;
+}
+
+.subscription__name {
+	font-size: var(--font-lg);
+	font-weight: 600;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.subscription__content {
+	align-items: baseline;
+	display: flex;
+	gap: var(--gap-tn);
+}
+
+.subscription__price {
+	margin: 0;
+}
+
+.subscription__previous_price {
+	color: var(--color-text-muted);
+	font-weight: 400;
+	margin: 0;
+	text-decoration: line-through;
+}
+
+.subscription__description p {
+	color: var(--color-text-light);
+	font-size: var(--font-sm);
+	font-weight: 400;
+	margin: 0;
+}
