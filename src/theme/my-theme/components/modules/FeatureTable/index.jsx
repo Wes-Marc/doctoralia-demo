@@ -13,7 +13,7 @@ export function Component(fieldValues) {
 		featuresGroup,
 		hublData
 	} = fieldValues;
-	
+
 	return (
 		<section className="feature_table">
 			<div className="content_wrapper">

@@ -4,7 +4,6 @@ import IconCheck from '../../assets/Icons/IconCheck.jsx';
 import Tooltip from '../Tooltip/index.jsx?island';
 
 export function FeatureItem(props) {
-	console.log(props)
 	const {
 		featureCategory,
 		featureItems,
