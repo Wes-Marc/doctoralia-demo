@@ -7,7 +7,7 @@
 The challenge require the development of a HubSpot CMS React component to compare Subscription features. The main objective was to produce a visual and functional component offering smooth UX editing experience for marketers setting the module up in HubSpot.
 
 
-\[Add image of component if possible]
+![FeaturesTable Component Image](https://github.com/Wes-Marc/doctoralia-demo/blob/master/src/theme/my-theme/assets/Images/featuresTable_component.jpg)
 
 
 ## Approach Explanation
