@@ -96,6 +96,7 @@ export function Component(fieldValues) {
 									planAmount={plansGroup}
 									featureCategory={feature.featureCategory}
 									featureItems={feature.featureItems}
+									tooltipFieldPath={[`featuresGroup[${index}]`]}
 								/>
 							))
 						}

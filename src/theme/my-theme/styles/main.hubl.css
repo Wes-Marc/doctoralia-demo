@@ -365,7 +365,7 @@ p {
 
 a {
 	cursor: pointer;
-	transition: var(--transition-slow);
+	transition: all var(--transition-slow);
 }
 
 /* Headings */
@@ -453,6 +453,7 @@ h6 {
 .button--secondary:focus {
 	background-color: var(--color-primary-hover);
 	color: var(--color-text-inverted);
+	outline: none;
 }
 
 /* Click */

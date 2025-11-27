@@ -12,7 +12,7 @@ p {
 /* Anchors */
 a {
 	cursor: pointer;
-	transition: var(--transition-slow);
+	transition: all var(--transition-slow);
 }
 
 /* Headings */

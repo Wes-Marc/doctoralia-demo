@@ -7,6 +7,7 @@ export function FeatureItem(props) {
 	const {
 		featureCategory,
 		featureItems,
+		tooltipFieldPath,
 		planAmount
 	} = props;
 
@@ -33,7 +34,7 @@ export function FeatureItem(props) {
 									<Island 
 										module={Tooltip}
 										wrapperClassName='flex_center'
-										text={`featuresGroup[0].featureItems[${index}].tooltipText`}
+										text={`${tooltipFieldPath}.featureItems[${index}].tooltipText`}
 										clientOnly={true}
 									/>
 								}
