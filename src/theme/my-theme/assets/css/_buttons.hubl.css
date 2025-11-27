@@ -33,6 +33,7 @@
 .button--secondary:focus {
 	background-color: var(--color-primary-hover);
 	color: var(--color-text-inverted);
+	outline: none;
 }
 
 /* Click */

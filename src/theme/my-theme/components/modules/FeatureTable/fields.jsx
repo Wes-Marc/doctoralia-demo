@@ -46,7 +46,7 @@ export const fields = (
 			occurrence={{
 				min: 1,
 				max: 3,
-				default: 1
+				default: 3
 			}}
 			groupOccurrenceMeta={{
 				featured_enabled: true,
@@ -54,7 +54,28 @@ export const fields = (
 			}}
 			default={[
 				{
-					planName: "Example",
+					planName: "Example 1",
+					showPrevious: true,
+					planPrice: 1,
+					previousPrice: 2,
+					showDescription: true,
+					description: '<p><span style="color:#006A59;font-weight:600">Save 20% off</span>for the first 2 months</p>',
+					showButton: true,
+					buttonText:"Learn more",
+					buttonVariant:"secondary",
+					buttonSize:"small",
+					buttonLink: {
+						open_in_new_tab: true,
+					},
+					buttonShowIcon: false,
+					buttonIcon: {
+						name: "arrow-down",
+					},
+					buttonIconPosition:"right",
+					fieldsVisibility: buttonFieldVisibility
+				},
+				{
+					planName: "Example 2",
 					showPrevious: true,
 					planPrice: 1,
 					previousPrice: 2,
@@ -63,6 +84,27 @@ export const fields = (
 					showButton: true,
 					buttonText:"Learn more",
 					buttonVariant:"primary",
+					buttonSize:"small",
+					buttonLink: {
+						open_in_new_tab: true,
+					},
+					buttonShowIcon: false,
+					buttonIcon: {
+						name: "arrow-down",
+					},
+					buttonIconPosition:"right",
+					fieldsVisibility: buttonFieldVisibility
+				},
+				{
+					planName: "Example 3",
+					showPrevious: true,
+					planPrice: 1,
+					previousPrice: 2,
+					showDescription: true,
+					description: '<p><span style="color:#006A59;font-weight:600">Save 20% off</span>for the first 2 months</p>',
+					showButton: true,
+					buttonText:"Learn more",
+					buttonVariant:"secondary",
 					buttonSize:"small",
 					buttonLink: {
 						open_in_new_tab: true,
@@ -106,16 +148,16 @@ export const fields = (
 			occurrence={{
 				min: 1,
 				max: null,
-				default: 1
+				default: 2
 			}}
 			default={[
 				{
-					featureCategory: "Marketing",
+					featureCategory: "Increase visibility and reputation",
 					featureItems: [
 						{
-							featureName: "Marketing feature",
+							featureName: "Marketplace profile",
 							showTooltip: true,
-							tooltipText: '<p>Example tooltip text</p>',
+							tooltipText: '<p>Example tooltip text 1</p>',
 							featuresData: {
 								optionA: {
 									planStarter: true,
@@ -129,6 +171,113 @@ export const fields = (
 									planVIP: true,
 									dataOptionC: "text",
 									optionCText: "Enhanced"
+								}
+							}
+						},
+						{
+							featureName: "Statistics performance",
+							showTooltip: true,
+							tooltipText: '<p>Example tooltip text 2</p>',
+							featuresData: {
+								optionA: {
+									planStarter: true,
+									dataOptionA: "text",
+									optionAText: "Basic"
+								},
+								optionB: {
+									planPlus: true,
+									dataOptionB: "text",
+									optionBText: "Basic"
+								},
+								optionC: {
+									planVIP: true,
+									dataOptionC: "text",
+									optionCText: "Enhanced"
+								}
+							}
+						},
+						{
+							featureName: "Opinion requests",
+							showTooltip: true,
+							tooltipText: '<p>Example tooltip text 3</p>',
+							featuresData: {
+								optionA: {
+									planStarter: true,
+									dataOptionA: "icon",
+								},
+								optionB: {
+									planPlus: true,
+									dataOptionB: "icon",
+								},
+								optionC: {
+									planVIP: true,
+									dataOptionC: "icon",
+								}
+							}
+						}
+					]
+				},
+				{
+					featureCategory: "Streamline booking management",
+					featureItems: [
+						{
+							featureName: "Online agenda",
+							showTooltip: true,
+							tooltipText: '<p>Example tooltip text 4</p>',
+							featuresData: {
+								optionA: {
+									planStarter: true,
+									dataOptionA: "icon",
+								},
+								optionB: {
+									planPlus: true,
+									dataOptionB: "icon"
+								},
+								optionC: {
+									planVIP: true,
+									dataOptionC: "text",
+									optionCText: "Enhanced"
+								}
+							}
+						},
+						{
+							featureName: "Appointment reminders",
+							showTooltip: true,
+							tooltipText: '<p>Example tooltip text 5</p>',
+							featuresData: {
+								optionA: {
+									planStarter: true,
+									dataOptionA: "text",
+									optionAText: "Basic"
+								},
+								optionB: {
+									planPlus: true,
+									dataOptionB: "text",
+									optionBText: "Basic"
+								},
+								optionC: {
+									planVIP: true,
+									dataOptionC: "text",
+									optionCText: "Enhanced"
+								}
+							}
+						},
+						{
+							featureName: "Waiting list",
+							showTooltip: true,
+							tooltipText: '<p>Example tooltip text 6</p>',
+							featuresData: {
+								optionA: {
+									planStarter: true,
+									dataOptionA: "icon",
+								},
+								optionB: {
+									planPlus: true,
+									dataOptionB: "icon",
+								},
+								optionC: {
+									planVIP: true,
+									dataOptionC: "icon",
 								}
 							}
 						}
