@@ -46,7 +46,7 @@ Building and using this project is straightforward, the configuration files are 
 
 
 >[!WARNING]
->The local module preview does **not** load template css. To view the >styled component open the **Demo** template in the local dev server or >import the main css file in the component ("styles/main.hubl.css") but >don't forget to remove it before deploying to HubSpot.
+>The local module preview does **not** load template css. To view the styled component open the **Demo** template in the local dev server or import the main css file in the component ("styles/main.hubl.css") but don't forget to remove it before deploying to HubSpot.
 
 
 >[!IMPORTANT]
