@@ -45,12 +45,12 @@ Building and using this project is straightforward, the configuration files are 
 * @spingroup/postcss-hubl (latest)
 
 
-[!WARNING]
-The local module preview does **not** load template css. To view the styled component open the **Demo** template in the local dev server or import the main css file in the component ("styles/main.hubl.css") but don't forget to remove it before deploying to HubSpot.
+>[!WARNING]
+>The local module preview does **not** load template css. To view the >styled component open the **Demo** template in the local dev server or >import the main css file in the component ("styles/main.hubl.css") but >don't forget to remove it before deploying to HubSpot.
 
 
-[!IMPORTANT]
-I've used HubSpot's **2025.2** platform.
+>[!IMPORTANT]
+>I've used HubSpot's **2025.2** platform.
 
 
 Thank you for viewing this, and I look forward to collaborate in awesome HubSpot projects with you!
