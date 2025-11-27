@@ -7,7 +7,7 @@
 The challenge require the development of a HubSpot CMS React component to compare Subscription features. The main objective was to produce a visual and functional component offering smooth UX editing experience for marketers setting the module up in HubSpot.
 
 
-\[Add image of component if possible]
+![FeaturesTable Component Image](https://github.com/Wes-Marc/doctoralia-demo/blob/master/src/theme/my-theme/assets/Images/featuresTable_component.jpg)
 
 
 ## Approach Explanation
@@ -28,9 +28,9 @@ One final thing I should mention is that I made the component entirely configura
 ## Obstacles Faced
 
 
-As I mentioned previously I used module fields to build the full editing experience for the Subscription Features component, and that was quite challenging. I'm more used to configuring module fields directly in the JSON file. When I started in HubSpot there was no other way to do that, so now with React and jsx I did have a hard time referencing the fields correctly. It took a lot of trial and error, specially with the \*\*Rich Text\*\* and \*\*Icon\*\* component fields.
+As I mentioned previously I used module fields to build the full editing experience for the Subscription Features component, and that was quite challenging. I'm more used to configuring module fields directly in the JSON file. When I started in HubSpot there was no other way to do that, so now with React and jsx I did have a hard time referencing the fields correctly. It took a lot of trial and error, specially with the **Rich Text** and **Icon** component fields.
 
-To help with this I used the HubSpot \*\*Elevate React Theme\*\* as a refence. It showed me the best way to configure and organize the fields, and what exactly is expected as props in those field components.
+To help with this I used the HubSpot **Elevate React Theme** as a refence. It showed me the best way to configure and organize the fields, and what exactly is expected as props in those field components.
 
 
 ## Additional Documentation
@@ -45,7 +45,7 @@ Building and using this project is straightforward, the configuration files are 
 * @spingroup/postcss-hubl (latest)
 
 
-\*\*Important note:\*\* I've used HubSpot's \*\*2025.2\*\* platform.
+**Important note:** I've used HubSpot's **2025.2** platform.
 
 
 Thank you for viewing this, and I look forward to collaborate in awesome HubSpot projects with you!
